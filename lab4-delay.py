@@ -14,11 +14,8 @@ f = open('./lab4_full.txt', 'r')
 for i in range(4):
     f.readline()
 
-# how to distinguish data packets and ack packets?
+# distinguishing data packets and ack packets:
 # data packets have 'seq' while ack packets don't
-
-# check the src and dst
-# ignore the ack data pair when there is retransmission
 data_dict = dict()
 x_time = []
 y_delay = []
@@ -51,3 +48,7 @@ plt.title('End-to-End Delay')
 plt.xlabel('time')
 plt.ylabel('delay (seconds)')
 plt.show()
+
+# possible improvements:
+# check the src and dst
+# ignore the ack data pair when there is retransmission
