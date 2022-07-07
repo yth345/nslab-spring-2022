@@ -59,3 +59,43 @@ https://homepage.ntu.edu.tw/~pollyhuang/teach/net-simtest-spring-08/labs/tcpdump
 3. Run the python code `lab4-delay.py` to plot the end-to-end delay of packets.
 4. The result is as follows.
 <img src="https://i.imgur.com/DprVDb3.png" width="40%">
+
+
+## 3. Access Databases
+
+### 3.1. 2019 InfluxDB
+
+#### 3.1.1. Access
+```python
+from influxdb import InfluxDBClient
+client = InfluxDBClient(host='140.112.42.161', port=23234, database='test_2')
+```
+
+#### 3.1.2. Summary
+1. Columns in the database:
+ - time: client request time (string)
+ - client_ip: (string)
+ - client_location: (string)
+ - fq_count: (int)
+ - ip_list: (list or string)
+ - num_edge: (float)
+ - stream_language: (string)
+ - viewer: viewer count (float)
+
+2. Options in column 'client_location':
+`'north-eu', 'southeast-asia', 'tw', 'west-eu', 'west-us', 'ko', 'central-au'`
+3. Options in column 'stream_language':
+`'ko', 'es', 'ja', 'fr', 'ru', 'zh-tw', 'en', 'en-gb', 'es-mx'`
+
+### 3.2. 2021 MongoDB
+
+#### 3.2.1 Access
+```python
+from pymongo import MongoClient
+client = MongoClient('localhost:25555')
+db = client.Twitch
+serverStatusResult = db.command('serverStatus')
+```
+
+#### 3.2.2 Summary
+[Summary Excel file](https://docs.google.com/spreadsheets/d/1_yi8a4zauQSFX8l6Vt5lr3SO0fcoJTNL/edit?usp=sharing&ouid=112952391443444590602&rtpof=true&sd=true)
