@@ -1,6 +1,6 @@
 # [nslab] Spring-2022 Special Topics
 
-This is my first semester of Special Topic in NTU Network and Systems Lab aiming to exploring Twitch's CDN. I spent the first half semester reading background papers, and spent the second half learning to use tcpdump and access databases.
+This is my first semester of Special Project in NTU Network and Systems Lab aiming to exploring Twitch's CDN. I spent the first half semester reading background papers, and spent the second half learning to use tcpdump and access databases.
 
 ## 1. Schedule
 
